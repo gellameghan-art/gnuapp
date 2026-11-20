@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>CampusPulse</title><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","on-surface":"#131b2e","on-primary-fixed":"#0f0069","on-error-container":"#93000a","on-tertiary-fixed":"#341100","tertiary":"#7b3300","on-secondary-fixed-variant":"#2f2ebe","secondary-fixed-dim":"#c0c1ff","on-secondary":"#ffffff","surface-bright":"#faf8ff","primary-container":"#4f46e5","on-surface-variant":"#464555","error":"#ba1a1a","on-background":"#131b2e","on-tertiary":"#ffffff","on-primary-container":"#dad7ff","surface-variant":"#dae2fd","inverse-primary":"#c3c0ff","surface-tint":"#4d44e3","on-secondary-container":"#fffbff","on-primary":"#ffffff","inverse-surface":"#283044","error-container":"#ffdad6","tertiary-fixed":"#ffdbca","background":"#faf8ff","on-tertiary-fixed-variant":"#783200","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#ffd2bd","surface-container-highest":"#dae2fd","primary":"#3525cd","inverse-on-surface":"#eef0ff","surface-container-high":"#e2e7ff","primary-fixed":"#e2dfff","tertiary-fixed-dim":"#ffb690","surface-container":"#eaedff","surface":"#faf8ff","on-error":"#ffffff","on-primary-fixed-variant":"#3323cc","surface-dim":"#d2d9f4","secondary-fixed":"#e1e0ff","outline-variant":"#c7c4d8","tertiary-container":"#a04500","on-secondary-fixed":"#07006c","outline":"#777587","surface-container-low":"#f2f3ff","secondary":"#4648d4","secondary-container":"#6063ee"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","gutter":"1.5rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"700"}],"code-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl-mobile":["2rem",{"lineHeight":"2.5rem","fontWeight":"800"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"700"}],"headline-xl":["2.5rem",{"lineHeight":"3rem","fontWeight":"800"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"600"}],"headline-lg":["1.875rem",{"lineHeight":"2.25rem","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="events-explorer" href="#"><img alt="CampusPulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC6eoap_PeARpQ7cPSn3KBPcLy9FmxQMiZQEeSDywuheGIhyViqQxj4wrvbB-TWmDwuCRNlnt17IA7-y66353919ajAD3R5_K9eKykJ8C45NR4igh3LAtI5SG0A5amk_joLchoLH9BOFDZoAqlN1_Np6gHkmP7IJGTjj9fq2R5N-c7mLvqlYj9DMsW0CIyVMMSKWJ5dU5EjA3nhbp5LFAzvwl9YHg-zyY9GUYTPqWK0"/><span class="font-headline-md text-headline-md text-primary tracking-tight font-bold">CampusPulse</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="events-explorer" href="#">Events Explorer</a><a class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="my-registrations" href="#">My Registrations</a><a class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="organize-and-manage" href="#">Organize &amp; Manage</a><a aria-current="page" class="px-3 py-1.5 rounded-lg transition-all bg-surface-container text-primary font-bold" data-path="admin-analytics" href="#">Admin Analytics</a></nav></div><div class="flex items-center gap-space-sm"><div class="hidden 2xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-medium">Supabase/PostgreSQL</span><span class="px-1.5 py-0.2 rounded bg-surface-container text-primary font-code-sm">events | users | reg</span></div><div class="relative group"><button class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-surface-container hover:bg-surface-container-low transition-all" type="button"><span class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-secondary-fixed text-on-secondary-fixed-variant">Student</span><span class="hidden lg:inline font-label-md text-label-md text-on-surface">Role Context</span></span><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></button><div class="absolute right-0 top-full mt-1.5 w-60 p-2 bg-surface-container-lowest rounded-xl shadow-[0_20px_25px_-5px_rgba(15,23,42,0.1),0_8px_10px_-6px_rgba(15,23,42,0.08)] border border-surface-container hidden group-hover:block z-50"><div class="px-2 py-1 text-[11px] font-semibold text-outline uppercase tracking-wider">Simulate Campus Role</div><a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold">Student Attendee</span><span class="text-[11px] text-on-surface-variant">Browse, RSVP, Tickets</span></div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed-variant">Active</span></a><a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold">Event Organizer</span><span class="text-[11px] text-on-surface-variant">Create, Manage, Check-in</span></div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-fixed text-on-primary-fixed-variant">Organizer</span></a><a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold">Campus Admin</span><span class="text-[11px] text-on-surface-variant">Audit, Metrics, Overrides</span></div><span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed-variant">Admin</span></a></div></div><div class="relative group"><button class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-surface-container hover:bg-surface-container-low transition-all" type="button"><span class="material-symbols-outlined text-primary text-[18px]">database</span><div class="flex flex-col text-left"><span class="font-code-sm text-code-sm text-on-surface leading-none">usr_7f8a9...</span><span class="text-[10px] text-on-surface-variant hidden md:inline leading-none mt-0.5">alex@campus.edu</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></button><div class="absolute right-0 top-full mt-1.5 w-72 p-2 bg-surface-container-lowest rounded-xl shadow-[0_20px_25px_-5px_rgba(15,23,42,0.1),0_8px_10px_-6px_rgba(15,23,42,0.08)] border border-surface-container hidden group-hover:block z-50"><div class="px-2 py-1 text-[11px] font-semibold text-outline uppercase tracking-wider">Simulated UUID DB Record</div><a class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low" href="#"><span class="material-symbols-outlined text-primary text-[16px]">key</span><div class="flex flex-col flex-1"><span class="font-code-sm text-code-sm text-primary font-semibold">usr_7f8a91c4</span><span class="text-[11px] text-on-surface-variant">alex@campus.edu (Student)</span></div></a><a class="flex items-center gap-2 p-2 rounded-lg hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-outline text-[16px]">key</span><div class="flex flex-col flex-1"><span class="font-code-sm text-code-sm text-on-surface">usr_b24c1809</span><span class="text-[11px] text-on-surface-variant">sarah_organizer@campus.edu</span></div></a><a class="flex items-center gap-2 p-2 rounded-lg hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-outline text-[16px]">key</span><div class="flex flex-col flex-1"><span class="font-code-sm text-code-sm text-on-surface">usr_e901a552</span><span class="text-[11px] text-on-surface-variant">admin_dean@campus.edu</span></div></a></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- System Status Banner & Top Control Ribbon -->
+<section class="w-full px-margin py-space-md bg-surface-container-low flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Postgres Node-01: OK</span>
+<span class="text-outline text-label-sm font-label-sm">|</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">p99: 42ms</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">admin_panel_settings</span>
+<span class="font-label-md text-label-md text-on-surface">Audited Session: <strong class="text-primary font-code-sm">usr_e901-77bb-12a0 (Dean Evans)</strong></span>
+</div>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold uppercase tracking-wide">Campus-Wide Scope</span>
+</div>
+<!-- Quick Ops Actions -->
+<div class="flex items-center gap-space-sm self-stretch lg:self-auto">
+<button class="flex-1 lg:flex-initial flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all" id="btn-export-csv">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Audit CSV</span>
+</button>
+<button class="flex-1 lg:flex-initial flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all" id="btn-flush-cache">
+<span class="material-symbols-outlined text-[18px] text-tertiary">cached</span>
+<span>Purge Edge Cache</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-secondary transition-all">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Run Compliance Check</span>
+</button>
+</div>
+</section>
+<!-- Executive Metric Bento Grid -->
+<section class="w-full px-margin py-space-xl">
+<div class="flex flex-col gap-1 mb-space-lg">
+<span class="font-code-sm text-code-sm text-primary uppercase tracking-widest font-semibold">Institutional Infrastructure // Telemetry</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Executive System Health &amp; Operations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric Card 1: Total Events -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Events Hosted</span>
+<span class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed-variant material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">48</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 128 total</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">trending_up</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold">+14.2%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs prior term</span>
+</div>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 37.5%"></div>
+</div>
+</div>
+<!-- Metric Card 2: Student Registrations -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-container/10 group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">DB Registrations</span>
+<span class="p-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">3,842</span>
+<span class="font-label-sm text-label-sm text-outline font-code-sm">rows</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold">99.1% Verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Student status</span>
+</div>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Metric Card 3: Avg Capacity Utilization -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary-fixed/30 group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Capacity Utilization</span>
+<span class="p-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant material-symbols-outlined text-[20px]">pie_chart</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">87.4%</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">Optimal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-outline text-[16px]">domain</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Max venue headroom: 12.6%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 87.4%"></div>
+</div>
+</div>
+<!-- Metric Card 4: Concurrency & 409 Conflict Rate -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-surface-variant group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">409 Conflict Rate</span>
+<span class="p-2 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[20px]">security</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">0.4%</span>
+<span class="font-code-sm text-code-sm text-outline">pk_conflict</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1,420 RPS max load test</span>
+</div>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 4%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Engagement Trend & Visual Analytics -->
+<section class="w-full px-margin pb-space-xl">
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-space-lg">
+<!-- Chart Column (2 Cols) -->
+<div class="xl:col-span-2 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Campus Engagement by Academic Stream</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Aggregated weekly RSVPs comparing top student faculties</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-lowest text-primary font-bold shadow-sm">4 Weeks</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface">Term</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface">Academic Year</button>
+</div>
+</div>
+</div>
+<!-- Inline SVG Visualization Chart -->
+<div class="w-full h-72 py-2 flex flex-col justify-end">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 760 220">
+<!-- Grid Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="740" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="740" y1="70" y2="70"></line>
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="740" y1="120" y2="120"></line>
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="740" y1="170" y2="170"></line>
+<line stroke="#CBD5E1" stroke-width="1.5" x1="40" x2="740" y1="200" y2="200"></line>
+<!-- Y Axis Labels -->
+<text class="text-[10px] fill-slate-400 font-sans" text-anchor="end" x="32" y="24">1.2k</text>
+<text class="text-[10px] fill-slate-400 font-sans" text-anchor="end" x="32" y="74">800</text>
+<text class="text-[10px] fill-slate-400 font-sans" text-anchor="end" x="32" y="124">400</text>
+<text class="text-[10px] fill-slate-400 font-sans" text-anchor="end" x="32" y="174">100</text>
+<!-- Stream 1: Engineering Area & Path -->
+<defs>
+<lineargradient id="engGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4F46E5" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="artsGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F97316" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#F97316" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<polygon fill="url(#engGrad)" points="60,200 60,110 160,85 260,95 360,50 460,60 560,35 660,45 720,30 720,200"></polygon>
+<polyline fill="none" points="60,110 160,85 260,95 360,50 460,60 560,35 660,45 720,30" stroke="#4F46E5" stroke-linecap="round" stroke-width="3"></polyline>
+<!-- Stream 2: Business & Economics -->
+<polyline fill="none" points="60,140 160,130 260,115 360,95 460,80 560,75 660,65 720,55" stroke="#0D9488" stroke-dasharray="2 0" stroke-width="2.5"></polyline>
+<!-- Stream 3: Arts & Media -->
+<polyline fill="none" points="60,170 160,165 260,150 360,140 460,120 560,110 660,90 720,85" stroke="#EA580C" stroke-width="2"></polyline>
+<!-- Data Point Anchors -->
+<circle cx="560" cy="35" fill="#4F46E5" r="4.5" stroke="#FFFFFF" stroke-width="2"></circle>
+<circle cx="560" cy="75" fill="#0D9488" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="560" cy="110" fill="#EA580C" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<!-- X Axis Marks -->
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="60" y="215">W01 (Oct)</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="160" y="215">W02</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="260" y="215">W03</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="360" y="215">W04 (Midterms)</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="460" y="215">W05</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="560" y="215">W06 (Hackathon)</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="660" y="215">W07</text>
+<text class="text-[11px] fill-slate-400 font-sans" text-anchor="middle" x="720" y="215">Current</text>
+</svg>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm border-t border-surface-container mt-2">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Engineering &amp; CS (47%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-emerald-600"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Business School (32%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Arts &amp; Design (21%)</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Last aggregate run: 4 mins ago</span>
+</div>
+</div>
+<!-- Quick Safety & Verification Feed -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Campus Alerts &amp; Audits</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container font-bold">2 flagged</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live event compliance and fire marshal occupancy monitors.</p>
+<div class="space-y-space-sm">
+<!-- Alert 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Neon Quad Rave 2025</span>
+<span class="font-code-sm text-code-sm text-outline">10m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Requested 450 cap exceeds Student Union Courtyard permit limit (300 max).</p>
+<div class="mt-2 flex items-center gap-2">
+<button class="px-2 py-1 bg-surface-container-lowest hover:bg-surface-container text-error font-label-sm text-label-sm rounded font-bold shadow-sm">Flag for Dean</button>
+<button class="px-2 py-1 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded shadow-sm">View Permit #9021</button>
+</div>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-600 text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">BioTech Career Mixer</span>
+<span class="font-code-sm text-code-sm text-outline">1h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">External vendor contracts pending signature. RSVPs auto-queued to waitlist.</p>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">security_update_good</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Robotics HackFest</span>
+<span class="font-code-sm text-code-sm text-outline">3h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Hardware lab safety waiver accepted by 100% of participants.</p>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md font-semibold text-center transition-all">
+          Review All 12 Safety Protocols
+        </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Event Health & Oversight Audit Table -->
+<section class="w-full px-margin pb-space-xl">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<!-- Table Header & Search/Filters -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">fact_check</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Campus Event Health &amp; Regulatory Audit</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time inspection of active database entities in <code class="font-code-sm bg-surface-container px-1 py-0.5 rounded text-primary">public.events</code></p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Filter title, UUID, organizer..." type="text"/>
+</div>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface focus:outline-none">
+<option>Status: All (Published, Draft, Flagged)</option>
+<option>Published Only</option>
+<option>Flagged / Under Review</option>
+<option>Past / Closed</option>
+</select>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-semibold hover:bg-primary-fixed-dim transition-all">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Columns</span>
+</button>
+</div>
+</div>
+<!-- Structured Table -->
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Event Title &amp; Details</th>
+<th class="py-3 px-4">Organizer UUID</th>
+<th class="py-3 px-4">Capacity Utilization</th>
+<th class="py-3 px-4">Publish State</th>
+<th class="py-3 px-4">Safety &amp; Compliance</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Audit Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 min-w-[260px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Annual AI &amp; Robotics Summit 2025</div>
+<div class="text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Grand Ballroom</span>
+<span>•</span>
+<span>Nov 12, 10:00 AM</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>usr_b24c-88aa</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">Robotics Club lead</div>
+</td>
+<td class="py-3.5 px-4 min-w-[160px]">
+<div class="flex items-center justify-between text-[12px] font-semibold mb-1">
+<span>240 / 250</span>
+<span class="text-tertiary">96%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 96%"></div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-100 text-emerald-800 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Published
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">verified</span> Fire Marshal OK
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Inspect Database Row">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-tertiary transition-colors" title="Pause Registrations">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-all">Audit</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 (Flagged) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-red-50/30">
+<td class="py-3.5 px-4 min-w-[260px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-error-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[20px]">music_note</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Neon Quad Rave 2025</div>
+<div class="text-[11px] text-error flex items-center gap-2 mt-0.5 font-semibold">
+<span>Courtyard Stage</span>
+<span>•</span>
+<span>Nov 15, 9:00 PM</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>usr_991f-03ca</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">Music Society VP</div>
+</td>
+<td class="py-3.5 px-4 min-w-[160px]">
+<div class="flex items-center justify-between text-[12px] font-semibold mb-1">
+<span class="text-error font-bold">450 / 300</span>
+<span class="text-error font-bold">150%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Flagged
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-label-sm font-label-sm bg-red-100 text-red-800 font-bold">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span> Exceeds Limit
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm hover:opacity-90 transition-all">Lock RSVP</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-all">Summon Org</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 min-w-[260px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">palette</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Fall Senior Studio Vernissage</div>
+<div class="text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Fine Arts Hall Gallery</span>
+<span>•</span>
+<span>Nov 18, 5:30 PM</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>usr_4401-cc19</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">Design Faculty Staff</div>
+</td>
+<td class="py-3.5 px-4 min-w-[160px]">
+<div class="flex items-center justify-between text-[12px] font-semibold mb-1">
+<span>95 / 150</span>
+<span class="text-on-surface-variant">63%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 63%"></div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-100 text-emerald-800 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Published
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">check</span> ADA Compliant
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-all">Audit</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 min-w-[260px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">cases</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Wall Street &amp; FinTech Networking Dinner</div>
+<div class="text-[11px] text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Faculty Club Annex</span>
+<span>•</span>
+<span>Nov 22, 6:00 PM</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>usr_8820-fa01</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">Commerce Association</div>
+</td>
+<td class="py-3.5 px-4 min-w-[160px]">
+<div class="flex items-center justify-between text-[12px] font-semibold mb-1">
+<span>120 / 120</span>
+<span class="text-tertiary font-bold">100% Sold</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Closed (Full)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">shield</span> Insurance Filed
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-all">Audit</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md mt-space-md border-t border-surface-container">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <span class="font-semibold text-on-surface">1 - 4</span> of <span class="font-semibold text-on-surface">128</span> institutional records</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md">Next</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Diagnostic Split: Live DB API Diagnostics & User Permission Matrix -->
+<section class="w-full px-margin pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Diagnostic Log Feed (7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">developer_board</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Edge API &amp; Postgres Trace Stream</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-emerald-700 font-semibold">Live Polling</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-space-md">Live inbound HTTP calls with latency and concurrency status.</p>
+<!-- Terminal Style Log Container -->
+<div class="rounded-xl bg-inverse-surface p-space-md text-inverse-on-surface font-code-sm text-code-sm space-y-2.5 max-h-96 overflow-y-auto">
+<!-- Log Entry 1 -->
+<div class="flex items-center justify-between gap-2 p-2 rounded bg-white/5 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[11px]">POST</span>
+<span class="text-white truncate">/api/registrations</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-emerald-400 font-bold">201 Created</span>
+<span class="text-white/60">34ms</span>
+<span class="text-[10px] text-white/40">14:22:08.411</span>
+</div>
+</div>
+<!-- Log Entry 2 (Conflict Caught) -->
+<div class="flex items-center justify-between gap-2 p-2 rounded bg-amber-500/10 border-l-2 border-amber-400">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold text-[11px]">POST</span>
+<span class="text-amber-100 truncate">/api/registrations</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-amber-300 font-bold">409 Conflict</span>
+<span class="text-white/60">12ms</span>
+<span class="text-[10px] text-white/40">14:22:04.190</span>
+</div>
+</div>
+<!-- Log Entry 3 -->
+<div class="flex items-center justify-between gap-2 p-2 rounded bg-white/5 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold text-[11px]">GET</span>
+<span class="text-white truncate">/api/events?department=engineering</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-emerald-400 font-bold">200 OK</span>
+<span class="text-white/60">68ms</span>
+<span class="text-[10px] text-white/40">14:21:59.002</span>
+</div>
+</div>
+<!-- Log Entry 4 -->
+<div class="flex items-center justify-between gap-2 p-2 rounded bg-white/5 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold text-[11px]">GET</span>
+<span class="text-white truncate">/api/me/registrations</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-emerald-400 font-bold">200 OK</span>
+<span class="text-white/60">29ms</span>
+<span class="text-[10px] text-white/40">14:21:52.784</span>
+</div>
+</div>
+<!-- Log Entry 5 -->
+<div class="flex items-center justify-between gap-2 p-2 rounded bg-white/5 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold text-[11px]">GET</span>
+<span class="text-white truncate">/api/events/evt_991f/registrations</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-emerald-400 font-bold">200 OK</span>
+<span class="text-white/60">44ms</span>
+<span class="text-[10px] text-white/40">14:21:40.119</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-t border-surface-container">
+<span class="font-body-sm text-body-sm text-on-surface-variant">PostgreSQL Connection Pool: <strong class="text-on-surface font-code-sm">24/100 active</strong></span>
+<button class="text-primary hover:text-secondary font-label-md text-label-md font-semibold flex items-center gap-1">
+<span>Open Supabase Log Studio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Role & User Permission Matrix (5 cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">manage_accounts</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Live User Database</h3>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container px-2 py-0.5 rounded text-primary">public.users</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-space-md">Instant role re-assignment and permission escalation controls.</p>
+<div class="space-y-space-sm">
+<!-- User Record 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Alex Chen (Student)</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant truncate">usr_7f8a91c4-2a01-44ee</div>
+<div class="text-[11px] text-on-surface-variant">alex@campus.edu • CS Junior</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="px-2 py-1 rounded text-label-sm font-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed-variant">Student</button>
+<button class="px-2 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-container" onclick="alert('Role update: usr_7f8a promoted to Organizer')">Promote</button>
+</div>
+</div>
+</div>
+<!-- User Record 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Sarah Lin (Organizer)</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant truncate">usr_b24c1809-ff11-90ab</div>
+<div class="text-[11px] text-on-surface-variant">sarah_organizer@campus.edu</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="px-2 py-1 rounded text-label-sm font-label-sm font-bold bg-primary-fixed text-on-primary-fixed-variant">Organizer</button>
+<button class="px-2 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-container" onclick="alert('Toggle role modal')">Change</button>
+</div>
+</div>
+</div>
+<!-- User Record 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2 border-l-4 border-tertiary">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Dean Evans (Institutional Admin)</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant truncate">usr_e901a552-77bb-12a0</div>
+<div class="text-[11px] text-on-surface-variant">admin_dean@campus.edu • Provost Office</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-2 py-1 rounded text-label-sm font-label-sm font-bold bg-tertiary-fixed text-on-tertiary-fixed-variant">Dean / Admin</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container">
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold text-center transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>Provision New Campus Staff User</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Quick Feedback -->
+<script>
+    document.getElementById('btn-flush-cache')?.addEventListener('click', function() {
+      this.classList.add('opacity-50');
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> <span>Purging...</span>';
+      setTimeout(() => {
+        this.classList.remove('opacity-50');
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-emerald-600">done</span> <span>Cache Purged</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">cached</span> <span>Purge Edge Cache</span>';
+        }, 2000);
+      }, 750);
+    });
+
+    document.getElementById('btn-export-csv')?.addEventListener('click', function() {
+      alert("Generating comprehensive compliance export for Academic Year 2024-2025. Download will initialize shortly.");
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container py-space-lg"><div class="w-full px-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary font-bold">CampusPulse</span><span class="text-body-sm font-body-sm text-on-surface-variant">| Connected College Experience Platform</span></div><div class="text-body-sm font-body-sm text-on-surface-variant">© 2025 CampusPulse Systems. Supabase Schema Simulation v2.4</div></div></footer></body></html>
